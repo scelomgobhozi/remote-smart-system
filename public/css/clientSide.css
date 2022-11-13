@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+.container-fluid{
+    max-width:1260px;
+}
+.container-fluid{
+    padding: 30px  !important;
+
+}
+
+.login{
+    background-color:#52E0BC;
+    padding: 2px 25px 2px 25px !important;
+
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+    background-color: white;
+}
+
+
+/*---------Body-----------*/
+.content-container{
+    margin: 80px auto 0 auto;
+    text-align: center;
+}
+.content-header h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    width:600px;
+    text-align:center;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.content-header a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+     background-color: #52E0BC;
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+    color:black;
+    border-radius:15px;
+    width:fit-content;
+    text-align:center;
+    margin:40px auto 0 auto;
+
+
+}
+.content-img img{
+    width:400px;
+}
+.login:hover{
+    background-color: #5fd3b4;
+}
+.login-container{
+    font-family: 'Montserrat', sans-serif;
+    padding:50px 0 20px 0;
+}
+.login-container-div{
+    margin-top: 10%;
+    width:50%;
+}
+
+
+/*// Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .content-header h1 {
+
+        font-size: 25px;
+        width: 75%;
+    }
+
+    .content-img img{
+        max-width:260px;
+    }
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+
+
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
