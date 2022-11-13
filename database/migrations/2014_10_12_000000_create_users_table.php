@@ -18,11 +18,12 @@ return new class extends Migration
             $table->string('name');
 
             $table->string('email')->unique();
-            $table->Bigint('phone')->unique();
-            $table->Bigint('meter_number')->unique();
-            $table->Bigint('id_number')->unique();
-            $table->string('adress');
+            $table->int('phone')->unique();
             $table->string('email')->unique();
+            $table->int('meter_number')->unique();
+            $table->int('id_number')->unique();
+            $table->string('adress');
+            $table->string('account_type')->default('prepaid');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
