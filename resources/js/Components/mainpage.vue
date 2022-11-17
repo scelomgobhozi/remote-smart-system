@@ -13,8 +13,8 @@
             </div>
 
             <div class="col-lg-6 col-md-6">
-              <dailyusage></dailyusage>
-
+             <dailyusage></dailyusage>
+ 
             </div>
 
             <div class="col-lg-6 col-md-6">
@@ -33,11 +33,13 @@ import cost from "./cost.vue";
 import chart from "./chart.vue"
 import mainswitch from "./mainswitch.vue";
 import dailyusage from "./dailyusage.vue";
+import axios from "axios";
+
 
 
 export default {
     components: {
-        dailyusage,
+
         navigation ,
         accounttype,
         cost,
@@ -48,6 +50,27 @@ export default {
     },
 
     name: "mainpage",
+
+
+    // methods:{
+    //     mainswitch(){
+    //         axios.post('');
+    //     }
+    // },
+
+
+    // mounted() {
+    //     if(this.mainSwitch){
+    //
+    //         while(this.mainSwitch){
+    //
+    //             window.setInterval(this.startSensor,30000);
+    //         }
+    //
+    //     }
+    // },
+
+
 
 
 }

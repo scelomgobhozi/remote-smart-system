@@ -4,25 +4,26 @@
         <div class="main-switch-container">
 
 
-            <div class="ind-switch">
+            <div class="ind-switch" >
                 <label> Main switch</label>
-                <Toggle v-model="mainSwitch" />
+                <Toggle v-model="mainSwitch" @change='this.switch' />
             </div>
+
 
             <div class="ind-switch">
                 <label> Geyser</label>
-                <Toggle v-model="geyser" />
+                <Toggle v-model="mainSwitch" />
             </div>
 
 
             <div class="ind-switch">
                 <label> Plugs </label>
-                <Toggle v-model="plugs" />
+                <Toggle v-model="mainSwitch" />
             </div>
 
             <div class="ind-switch">
                 <label> Stove</label>
-                <Toggle v-model="stove" />
+                <Toggle v-model="mainSwitch" />
             </div>
 
         </div>
@@ -30,7 +31,8 @@
 </template>
 
 <script>
-import Toggle from '@vueform/toggle'
+import Toggle from '@vueform/toggle';
+import axios from "axios";
 
 export default {
     name: "mainswitch",
@@ -40,12 +42,30 @@ export default {
     },
     data() {
         return {
-            mainSwitch: true,
+            mainSwitch:true,
             geyser:true,
             plugs:true,
             stove:true
 
         }
+    },
+    methods:{
+        switch(){
+
+            if(this.mainSwitch){
+                axios.get('http://localhost/esp-outputs-action.php?action=output_update&id=3&state=1')
+            }else {
+                axios.get('http://localhost/esp-outputs-action.php?action=output_update&id=3&state=0')
+            }
+
+        }
+
+    },
+    mounted() {
+        this.switch();
+
+
+
     }
 }
 </script>
@@ -54,7 +74,7 @@ export default {
 
 .includes-h5{
     max-width:400px;
-    margin-left: auto;
+    margin: auto;
 
 }
 h5{

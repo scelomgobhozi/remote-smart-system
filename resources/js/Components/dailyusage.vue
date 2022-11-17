@@ -1,17 +1,20 @@
 <template>
-    <h5> 30 Days avarage consumption</h5>
+    <div class="includes-h5">
+    <h5>  avarage current consumption</h5>
     <div class="daily-cost-container">
+
         <div class="price-div">
 
             <h6> Daily usage</h6>
-            <p>95 kw</p>
+            <p>12W</p>
 
         </div>
         <div class="prev-cost">
-            <h6>Avarage daily usage </h6>
-            <p>76 kw</p>
+            <h6>Avarage usage </h6>
+            <p>13.2W</p>
 
         </div>
+    </div>
     </div>
 </template>
 
@@ -19,15 +22,22 @@
 export default {
     name: "dailyusage"
 }
+
+
 </script>
 
 <style scoped>
+.includes-h5{
+    max-width:400px;
+    margin: auto;
+}
 h5{
     margin-top: 80px;
     color: #fff;
+    
 }
 .daily-cost-container{
-    width:400px;
+    
     height: 150px;
     display: flex;
     flex-wrap: wrap;
@@ -37,10 +47,19 @@ h5{
     background-color: rgba(17, 172, 132, 0.50);
     padding:20px;
     border-radius:10px;
+    
 }
 
 .daily-cost-container p{
     font-weight: lighter;
     text-align: center
 }
+
+/* 
+@media (max-width: 800px) {
+    .daily-cost-container{
+       display: block;
+    }
+} */
+
 </style>

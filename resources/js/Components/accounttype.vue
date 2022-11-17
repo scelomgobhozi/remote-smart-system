@@ -12,8 +12,8 @@ export default {
 
 <style scoped>
 .acc-type-section{
-    background-color: rgba(17, 172, 132, 0.99);
-    border-radius: 2px;
+    background-color: rgba(17, 172, 133, 0.685);
+    border-radius: 10px;
     color: white;
     width: fit-content;
     padding: 5px 10px 5px 10px;

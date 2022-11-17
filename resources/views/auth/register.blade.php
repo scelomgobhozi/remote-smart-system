@@ -14,8 +14,8 @@
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                            <div class="col-md-6 ">
+                                <input id="name" placeholder="Name"  type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -45,7 +45,7 @@
 
 
                         <div class="row mb-3">
-                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('phone') }}</label>
+                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('phone Number') }}</label>
 
                             <div class="col-md-6">
                                 <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
@@ -59,10 +59,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="meter_no" class="col-md-4 col-form-label text-md-end">{{ __('meter_no') }}</label>
+                            <label for="meter_number" class="col-md-4 col-form-label text-md-end">{{ __('meter number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="meter_number" type="text" class="form-control @error('meter_number') is-invalid @enderror" name="meter_nummber" value="{{ old('meter_number') }}" required autocomplete="meter_number" autofocus>
+                                <input id="meter_number" type="text" class="form-control @error('meter_number') is-invalid @enderror" name="meter_number" value="{{ old('meter_number') }}" required autocomplete="meter_number" autofocus>
 
                                 @error('meter_number')
                                 <span class="invalid-feedback" role="alert">
@@ -73,10 +73,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="id_number" class="col-md-4 col-form-label text-md-end">{{ __('id_number') }}</label>
+                            <label for="id_number" class="col-md-4 col-form-label text-md-end">{{ __('id number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="id_number" type="text" class="form-control @error('meter_no') is-invalid @enderror" name="id_numbero" value="{{ old('id_number') }}" required autocomplete="id_number" autofocus>
+                                <input id="id_number" type="text" class="form-control @error('meter_no') is-invalid @enderror" name="id_number" value="{{ old('id_number') }}" required autocomplete="id_number" autofocus>
 
                                 @error('id_number')
                                 <span class="invalid-feedback" role="alert">
@@ -102,15 +102,23 @@
 
                         <div class="row mb-3">
                             <div class="col-md-6 m-r-auto">
-                                <select class="form-select " aria-label="Default select example">
-                                    <option selected>Account type</option>
-                                    <option value="prepaid">Prepaid</option>
-                                    <option value="credit">Credit</option>
 
-                                </select>
                             </div>
 
 
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="account_type" class="col-md-4 col-form-label text-md-end">{{ __('Account type') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="account_type" class="form-select " aria-label="Default select example">
+                                    <option selected>Account type</option>
+                                    <option name="account_type" value="prepaid">Prepaid</option>
+                                    <option name="account_type" value="credit">Credit</option>
+
+                                </select>
+                            </div>
                         </div>
 
 
@@ -140,7 +148,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary login-btn">
                                     {{ __('Register') }}
                                 </button>
                             </div>

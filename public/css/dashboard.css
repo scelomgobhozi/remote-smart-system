@@ -1,44 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-body{
-    background-color:#282639;
-    font-family: 'Montserrat', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+    background-color: #282639;
+    font-family: "Montserrat", sans-serif;
     padding-left: 50px;
     padding-right: 50px;
-
+    padding-bottom: 50px;
 }
-.logout{
-    background-color:#52E0BC;
+.logout {
+    background-color: #52e0bc;
     padding: 2px 25px 2px 25px !important;
 
     border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
+.e-statement {
+    margin:70px auto 0 auto;
+    background-color: #52e0bc;
+    padding: 10px 20px 5px 20px;
+    max-width: fit-content;
+}
 
 /*// Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
-    .main-main{
-        padding:30px;
+    .main-main {
+        padding: 30px;
     }
-
-
 }
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
- .main-main{
-     padding:50px;
- }
+    .main-main {
+        padding: 100px;
+    }
 }
 
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
-
-
-
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-
 }

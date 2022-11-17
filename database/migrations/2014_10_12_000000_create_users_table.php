@@ -18,16 +18,24 @@ return new class extends Migration
             $table->string('name');
 
             $table->string('email')->unique();
-            $table->int('phone')->unique();
-            $table->string('email')->unique();
-            $table->int('meter_number')->unique();
-            $table->int('id_number')->unique();
-            $table->string('adress');
+            $table->BigInteger('phone')->nullable();
+            $table->unsignedBigInteger('meter_info')->nullable();
+
+            $table->BigInteger('meter_number')->unique();
+            $table->BigInteger('id_number')->unique();
+            $table->string('address');
             $table->string('account_type')->default('prepaid');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+            $table->foreign('meter_info')
+                ->references('id')
+                ->on('esp32data')
+                ->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
+
+
         });
     }
 
